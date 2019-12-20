@@ -2,8 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-mon-composant',
-  templateUrl: './mon-composant.component.html',
-  styleUrls: ['./mon-composant.component.scss'],
+  template: 'Hello world!!',
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class MonComposantComponent implements OnInit {

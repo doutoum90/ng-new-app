@@ -2,26 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MonComposantComponent } from './mon-composant/mon-composant.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MonComposantComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  declarations: [MonComposantComponent, AppComponent],
+  imports: [BrowserModule],
   // bootstrap: [AppComponent],
-  entryComponents: [MonComposantComponent]
+  entryComponents: [MonComposantComponent, AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
-  constructor(private injector: Injector) {}
+  constructor(private injector: Injector) { }
   ngDoBootstrap(): void {
     this.createWebComponent(MonComposantComponent, 'mon-composant');
   }

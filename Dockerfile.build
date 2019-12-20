@@ -1,0 +1,7 @@
+FROM node:11.15.0-alpine as build-stage
+# RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+RUN npm i -g @angular/cli
+COPY . /usr/src/app
+
+CMD ng serve --host 0.0.0.0 --port 4000

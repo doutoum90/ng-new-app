@@ -1,0 +1,17 @@
+version: '3'
+services:
+  simple-project:
+    build: .
+    container_name: simple-project
+    ports:
+      - "808:80"
+    volumes:
+      - /dist/out:/usr/share/nginx/html
+  simple-project2:
+    build: 
+      context: .
+      dockerfile: Dockerfile.build
+    container_name: simple-project2
+    ports:
+      - "809:4000"
+    
